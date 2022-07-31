@@ -1,4 +1,4 @@
-import IProduct from '../interfaces';
+import { IProduct } from '../interfaces';
 import { connection, ProductModel } from '../models';
 
 export default class ProductService {
