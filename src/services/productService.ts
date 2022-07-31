@@ -8,6 +8,14 @@ export default class ProductService {
     this.model = new ProductModel(connection);
   }
 
+  public findAll = async (): Promise<IProduct[]> => {
+    const { model } = this;
+
+    const result = await model.findAll();
+
+    return result;
+  };
+
   public create = async (product: IProduct): Promise<IProduct> => {
     const { model } = this;
 
