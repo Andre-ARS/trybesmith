@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import ProductController from '../controllers';
+import { ProductController } from '../controllers';
 import 'express-async-errors';
 import errorHandler from '../middlewares';
 
