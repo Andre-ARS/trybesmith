@@ -5,7 +5,7 @@ import { IUser } from '../interfaces';
 dotenv.config();
 
 export default class TokenService {  
-  secret: string;
+  public secret: string;
 
   constructor() {
     this.secret = process.env.MY_SECRET || 'password';
@@ -24,7 +24,7 @@ export default class TokenService {
     return token;
   };
 
-  public validateToken = (token: string) => {
+  public validateToken = (token: string): IUser => {
     const { secret } = this;
 
     const { data: user }: any = jwt.verify(token, secret);
