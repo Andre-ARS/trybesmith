@@ -7,6 +7,7 @@ const productRoute = Router();
 
 const productController = new ProductController();
 
+productRoute.get('/', productController.findAll);
 productRoute.post('/', productController.create);
 
 productRoute.use(errorHandler);
