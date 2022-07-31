@@ -41,6 +41,8 @@
     "ProductService",
     "ProductController",
     "middlewares ",
-    "UserModel"
+    "UserModel",
+    "UserService",
+    "UserController"
   ]
 }
