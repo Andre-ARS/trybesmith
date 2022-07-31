@@ -39,6 +39,7 @@
     "interfaces",
     "ProductModel",
     "ProductService",
-    "ProductController"
+    "ProductController",
+    "middlewares "
   ]
 }
