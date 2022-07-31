@@ -43,6 +43,7 @@
     "middlewares ",
     "UserModel",
     "UserService",
-    "UserController"
+    "UserController",
+    "OrderModel"
   ],
 }
