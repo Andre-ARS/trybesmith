@@ -45,6 +45,8 @@
     "UserService",
     "UserController",
     "OrderModel",
-    "OrderController"
+    "OrderController",
+    "validations",
+    "AuthService"
   ],
 }

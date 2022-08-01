@@ -7,6 +7,9 @@ const errorHandler = (err: Error, req: Request, res: Response, next: NextFunctio
     case 'ValidationError':
       res.status(400).json({ message: details[0].message });
       break;
+    case 'InvalidData':
+      res.status(401).json({ message });
+      break;
     case 'NotFoundError':
       res.status(404).json({ message });
       break;

@@ -1,3 +1,4 @@
+import AuthService from './authService';
 import OrderService from './OrderService';
 import ProductService from './productService';
 import TokenService from './tokenService';
@@ -8,4 +9,5 @@ export {
   TokenService,
   UserService,
   OrderService,
+  AuthService,
 };
