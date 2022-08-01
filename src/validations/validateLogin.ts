@@ -13,7 +13,6 @@ const validateBody = (userInfo: ILogin) => {
 };
 
 const validateLogin = (result: IUser | undefined) => {
-  console.log(result);
   if (!result) {
     const err = new Error('Username or password invalid');
     err.name = 'InvalidData';
