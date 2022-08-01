@@ -1,5 +1,6 @@
 import { IUser } from '../interfaces';
 import { connection, UserModel } from '../models';
+import { usersValidation } from '../validations';
 import TokenService from './tokenService';
 
 export default class UserService {
@@ -14,6 +15,8 @@ export default class UserService {
 
   public create = async (user: IUser): Promise<string | undefined> => {
     const { model, tokenService } = this;
+
+    usersValidation(user);
 
     const result = await model.create(user);
 
