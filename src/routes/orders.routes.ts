@@ -1,13 +1,15 @@
 import { Router } from 'express';
-import { OrderController } from '../controllers';
 import 'express-async-errors';
-import errorHandler from '../middlewares';
+import { OrderController } from '../controllers';
+import { errorHandler, tokenValidation } from '../middlewares';
 
 const ordersRoute = Router();
 
 const orderController = new OrderController();
 
 ordersRoute.get('/', orderController.findAll);
+ordersRoute.use(tokenValidation);
+ordersRoute.post('/', orderController.create);
 
 ordersRoute.use(errorHandler);
 

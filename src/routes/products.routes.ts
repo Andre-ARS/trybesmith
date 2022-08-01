@@ -1,7 +1,7 @@
 import { Router } from 'express';
-import { ProductController } from '../controllers';
 import 'express-async-errors';
-import errorHandler from '../middlewares';
+import { ProductController } from '../controllers';
+import { errorHandler } from '../middlewares';
 
 const productRoute = Router();
 
