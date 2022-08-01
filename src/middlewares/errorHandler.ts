@@ -10,11 +10,8 @@ const errorHandler = (err: Error, req: Request, res: Response, next: NextFunctio
     case 'InvalidData':
       res.status(401).json({ message });
       break;
-    case 'NotFoundError':
-      res.status(404).json({ message });
-      break;
-    case 'ConflictError':
-      res.status(409).json({ message });
+    case 'Unprocessable':
+      res.status(422).json({ message });
       break;
     default:
       res.status(500).json({ message });
