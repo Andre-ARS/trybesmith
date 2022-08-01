@@ -29,4 +29,13 @@ export default class ProductModel {
 
     return { id, ...product };
   };
+
+  public update = async (orderId: number, productId: number) => {
+    const { connection } = this;
+
+    const query = `UPDATE Trybesmith.Products SET orderId = ?
+      WHERE id = ?;`;
+    
+    await connection.execute(query, [orderId, productId]);
+  };
 }
