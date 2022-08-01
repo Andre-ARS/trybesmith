@@ -47,6 +47,7 @@
     "OrderModel",
     "OrderController",
     "validations",
-    "AuthService"
+    "AuthService",
+    "AuthController"
   ],
 }
