@@ -20,6 +20,6 @@ export default class UserService {
 
     const result = await model.create(user);
 
-    if (result) return tokenService.createToken(user);
+    if (result) return tokenService.createToken(result);
   }; 
 }
