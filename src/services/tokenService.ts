@@ -24,11 +24,21 @@ export default class TokenService {
     return token;
   };
 
-  public validateToken = (token: string): IUser => {
-    const { secret } = this;
-
-    const { data: user }: any = jwt.verify(token, secret);
-
-    return user;
+  public validateToken = (token: string): IUser | undefined => {
+    try {
+      const { secret } = this;
+  
+      if (!token) throw new Error('Token not found');
+         
+      const { data: user }: any = jwt.verify(token, secret);
+  
+      return user;      
+    } catch (error: any) {
+      error.name = 'InvalidData';
+      if (error.message.includes('jwt malformed')) {
+        error.message = 'Invalid token';
+      }
+      throw error;
+    }
   };
 }
