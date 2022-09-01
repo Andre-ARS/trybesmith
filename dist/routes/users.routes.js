@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+require("express-async-errors");
+const controllers_1 = require("../controllers");
+const middlewares_1 = require("../middlewares");
+const usersRoute = (0, express_1.Router)();
+const userController = new controllers_1.UserController();
+usersRoute.post('/', userController.create);
+usersRoute.use(middlewares_1.errorHandler);
+exports.default = usersRoute;
