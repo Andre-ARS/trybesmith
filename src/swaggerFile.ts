@@ -5,7 +5,7 @@ const swaggerFile = {
   swagger: '2.0',
   info: {
     version: '1.0.0',
-    title: 'Store Manager',
+    title: 'Trybesmith',
     description: 'API de um CRUD de uma loja de produtos medievais',
   },
   host: 'localhost:3000',
