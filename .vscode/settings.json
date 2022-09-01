@@ -49,6 +49,7 @@
     "validations",
     "AuthService",
     "AuthController",
-    "OrderService"
+    "OrderService",
+    "dependencies"
   ],
 }
